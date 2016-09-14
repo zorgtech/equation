@@ -1,0 +1,38 @@
+ <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+     
+<h1>Equation Solver</h1><br>
+
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input type="number" id="side1" name="side1"> - Input the first side of a equation!<br>
+          <label >Side 1</label>
+        </div>
+        <div class="input-field col s6">
+          <input type="number" id="side2" name="side2"> - Input the second side side of a equation!<br>
+          <label>Side 2</label>
+        </div>
+      </div>
+    </form>
+  </div>
+<button type="button" onclick="getNumber()">Click Me For A Random Number!</button>
+<br>
+<table id="myTable">
+</table>
+<script>
+function getNumber() {
+var seed1 = document.getElementById("seed1").value;
+var seed2 = document.getElementById("seed2").value;
+var num =  (323265464356749587598047590834750938753045394857309845709384570394857230985730986745096734095*(3534534648746348577777774056859345035856025353453523536486503435455*(new Date).getTime()*seed2+65464356344586487646735487256732628727854287)%seed1)%seed1;
+ var table = document.getElementById("myTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = num;
+}
+</script>
