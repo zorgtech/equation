@@ -20,12 +20,12 @@
       </div>
     </form>
   </div>
-<button type="button" onclick="getNumber()">Click Me For A Random Number!</button>
+<button type="button" onclick="solve()">Click Me For A Random Number!</button>
 <br>
 <table id="myTable">
 </table>
 <script>
-function getNumber() {
+function solve() {
 var seed1 = document.getElementById("seed1").value;
 var seed2 = document.getElementById("seed2").value;
 var num =  (323265464356749587598047590834750938753045394857309845709384570394857230985730986745096734095*(3534534648746348577777774056859345035856025353453523536486503435455*(new Date).getTime()*seed2+65464356344586487646735487256732628727854287)%seed1)%seed1;
