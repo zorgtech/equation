@@ -32,7 +32,10 @@ var num;
 var x;
 for(i = -1000; i < 1000; i=i+0.01){
  x=i;
- if (math.eval(seed1)===math.eval(seed2)){
+ var scope = {
+  x: i,
+};
+ if (math.eval(seed1, scope)===math.eval(seed2, scope)){
  num=i;
  break;
  }
