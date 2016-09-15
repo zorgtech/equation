@@ -3,6 +3,8 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.5.0/math.min.js"></script>
+
      
 <h1>Equation Solver</h1><br>
 
@@ -27,9 +29,9 @@ function solve() {
 var seed1 = document.getElementById("side1").value;
 var seed2 = document.getElementById("side2").value;
 var num;
-for(i = 0; i < 1000; i++){
+for(i = -1000; i < 1000; i=i+0.01){
  x=i;
- if (eval(seed1)===eval(seed2)){
+ if (math.eval(seed1)===math.eval(seed2)){
  num=i;
  break;
  }
