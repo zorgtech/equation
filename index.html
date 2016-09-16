@@ -51,9 +51,10 @@ if (math.eval(seed1, scope) === math.eval(seed2, scope)) {
 var scope = {
 		x: -x,
 	};
-if (math.eval(seed2, scope)==-x) {
+if (math.eval(seed1, scope) === math.eval(seed2, scope)) {
 		num = x+", "+-x;
 }
+
 var table = document.getElementById("myTable");
 var row = table.insertRow(0);
 var cell1 = row.insertCell(0);
