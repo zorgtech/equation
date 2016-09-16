@@ -43,18 +43,17 @@ for (i = -100; i < 10000; i = i + 1) {
   	num = "No Solution"
 }
 var scope = {
-		x: x + 1,
-	};
-if (math.eval(seed1, scope) === math.eval(seed2, scope)) {
-		num = "any";
-}
-var scope = {
 		x: -x,
 	};
 if (math.eval(seed1, scope) === math.eval(seed2, scope)) {
 		num = x+", "+-x;
 }
-
+var scope = {
+		x: x + 1,
+	};
+if (math.eval(seed1, scope) === math.eval(seed2, scope)) {
+		num = "any";
+}
 var table = document.getElementById("myTable");
 var row = table.insertRow(0);
 var cell1 = row.insertCell(0);
